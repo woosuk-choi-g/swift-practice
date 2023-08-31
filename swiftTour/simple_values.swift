@@ -31,3 +31,21 @@ let quotation = """
     I still have \(apples + oranges) pieces of fruit.
     """
 print(quotation)
+
+
+var fruits = ["strawberries", "limes", "tangerines"]
+fruits[1] = "grapes"
+
+var occupations = [
+    "Malcolm": "Captain",
+    "Kaylee": "Mechanic",
+]
+occupations["Jayne"] = "Public Relations"
+print(fruits)
+print(occupations)
+
+
+let emptyArray: [String] = []
+let emptyDictionary: [String: Float] = [:]
+// let test = [:] // error: empty collection literal requires an explicit type
+let test: [AnyHashable: Any] = [:]
