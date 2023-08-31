@@ -4,7 +4,7 @@
         {
             "label": "swiftc with debug",
             "type": "shell",
-            "command": "swiftc -g ${file} -o ${fileDirname}/${fileBasenameNoExtension}",
+            "command": "mkdir -p .build/debug && swiftc -g ${file} -o ${workspaceFolder}/.build/debug/${fileBasenameNoExtension}",
             "group": {
                 "kind": "build",
                 "isDefault": true

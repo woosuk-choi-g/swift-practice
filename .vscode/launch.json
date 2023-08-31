@@ -10,7 +10,7 @@
             "type": "lldb",
             "request": "launch",
             "preLaunchTask": "swiftc with debug",
-            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "program": "./.build/debug/${fileBasenameNoExtension}",
             "args": [],
             "sourceLanguages": ["swift"]
         },
