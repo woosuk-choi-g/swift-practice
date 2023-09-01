@@ -36,8 +36,8 @@ class Square: NamedShape {
         return sideLength * sideLength
     }
 
-    func simpleDescription() -> String {
-    // override func simpleDescription() -> String {
+    // func simpleDescription() -> String { // error: overriding declaration requires an 'override' keyword
+    override func simpleDescription() -> String {
         return "A square with sides of length \(sideLength)."
     }
 }
