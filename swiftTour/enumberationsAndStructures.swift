@@ -93,3 +93,24 @@ switch success {
 } // Sunrise is at 6:00 am and sunset is at 8:09 pm.
 
 
+struct Card {
+    var rank: Rank
+    var suit: Suit
+    func simpleDescription() -> String {
+        return "The \(rank.simpleDescription()) of \(suit.simpleDescription())"
+    }
+}
+let threeOfSpades = Card(rank: .three, suit: .spades)
+let threeOfSpadesDescription = threeOfSpades.simpleDescription()
+
+
+func allCards() -> [Card] {
+    var results = [Card]()
+    for suit in [Suit.spades, Suit.hearts, Suit.diamonds, Suit.clubs] {
+        for rank in [Rank.ace, Rank.two, Rank.three, Rank.four, Rank.five, Rank.six, Rank.seven, Rank.eight, Rank.nine, Rank.ten, Rank.jack, Rank.queen, Rank.king] {
+            results.append(Card(rank: rank, suit: suit))
+        }
+    }
+    return results
+}
+print(allCards())
