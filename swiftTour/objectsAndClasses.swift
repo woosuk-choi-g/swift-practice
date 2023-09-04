@@ -95,3 +95,7 @@ print(triangleAndSquare.square.sideLength) // 10.0
 print(triangleAndSquare.triangle.sideLength) // 10.0
 triangleAndSquare.square = Square(sideLength: 50, name: "larger square")
 print(triangleAndSquare.triangle.sideLength) // 50.0
+
+
+let optionalSquare: Square? = Square(sideLength: 2.5, name: "optional square")
+let sideLength = optionalSquare?.sideLength
