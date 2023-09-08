@@ -9,7 +9,7 @@ class SimpleClass: ExampleProtocol {
     var simpleDescription: String = "A very simple class."
     var anotherProperty: Int = 69105
     func adjust() {
-        simpleDescription += "  Noe 100% adjusted."
+        simpleDescription += "  Now 100% adjusted."
     }
 }
 var a = SimpleClass()
@@ -36,3 +36,8 @@ extension Int: ExampleProtocol {
     }
 }
 print(7.simpleDescription)
+// print(7.adjust()) // error: cannot use mutating member on immutable value: literals are not mutable
+
+
+let protocolValue: any ExampleProtocol = a
+print(protocolValue.simpleDescription) // "A very simple class.  Now 100% adjusted."
